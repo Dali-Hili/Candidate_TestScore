@@ -9,6 +9,9 @@ router.post("/create", condidateController.createCondidate)
 router.get("/", condidateController.findAllCondidate)
 
 //insert condidate score
-router.put("/insertScore", condidateController.insertScore)
+router.put("/insertScore/:email", condidateController.insertScore)
+
+//Get highest scoring candidate
+router.get("/highestScore", condidateController.highestScoringCondidate)
 
 module.exports = router
